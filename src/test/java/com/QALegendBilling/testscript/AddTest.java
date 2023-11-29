@@ -25,7 +25,7 @@ public class AddTest extends Base {
 	AddNewProductPage addnewproductpage;
 	
 	
-	@Test
+	@Test(priority=1,enabled=true,description="tc_006_verifyErrorMessageDisplayedWithoutFillingMandatoryFieldinAddUser()",groups= {"Sanity"})
 	
 	public void tc_006_verifyErrorMessageDisplayedWithoutFillingMandatoryFieldinAddUser()//passed
 	{
@@ -55,8 +55,8 @@ public class AddTest extends Base {
 	Assert.assertEquals(actcPasswordErrorMsg, expErrorMsg,ErrorMessages2.INVALID_CPASSWORD);
 	}
 	
-	@Test
-	public void tc_007_verifyUserLoginWithNewlyAddedUser()//partial correct
+	@Test(priority=1,enabled=true,description="tc_007_verifyUserLoginWithNewlyAddedUser()",groups= {"Sanity"})
+	public void tc_007_verifyUserLoginWithNewlyAddedUser() //Passed
 	{
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		String expUserName = data.get(1).get(0);
@@ -103,8 +103,8 @@ public class AddTest extends Base {
 		
 	}
 	
-	@Test
-	public void tc_008_verifyDeleteUser()
+	@Test(priority = 1, enabled = true, description = "tc_008_verifyDeleteUser()", groups = { "Smoke" })
+	public void tc_008_verifyDeleteUser() //passed
 	{
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		String expUserName = data.get(1).get(0);
@@ -146,7 +146,7 @@ public class AddTest extends Base {
 		
 	}
 	
-	@Test
+	@Test(priority = 1, enabled = true, description = "tc_009_verifyAddNewProduct()", groups = { "Smoke" })
 	
 	public void tc_009_verifyAddNewProduct() throws AWTException, InterruptedException {
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
@@ -159,8 +159,22 @@ public class AddTest extends Base {
 		home.ClickonProducts();
 		addnewproductpage = home.ClickonAddProduct();
 		addnewproductpage.ClickonBrowse();
-		
-		
-
+	}
+	
+	@Test(priority=1,enabled=true,description="tc_010_verifyShowEntries()",groups= {"Sanity"})
+	public void tc_010_verifyShowEntries() //passed
+	{
+		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
+		String expUserName = data.get(1).get(0);
+		String expPassword = data.get(1).get(1);
+		login = new LoginPage(driver);
+		login.enterUsername(expUserName);
+		login.enterUserPassword(expPassword);
+		home =login.clickonLoginButton();
+		home.clickonUserManagement();
+		users =home.clickonUserMgUsers();
+		users.clickshowentries();
+		users.selectEntries();
+	    
 	}
 }

@@ -25,7 +25,7 @@ public class HomeTest extends Base
 	UserPage users;
 	
 	
-	@Test
+	@Test(priority = 1, enabled = true, description = "tc_005_verifyUserSearchWithValidData()", groups = { "Smoke" })
 	public void tc_005_verifyUserSearchWithValidData() { //passed
 
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
@@ -65,7 +65,7 @@ public class HomeTest extends Base
 		
 	}
 	
-	@Test
+	@Test(priority=1,enabled=true,description="tc_004_verifyUserManagementtabs()",groups= {"Regression"})
 	
 	public void tc_004_verifyUserManagementtabs() { //passed
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");

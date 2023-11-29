@@ -18,7 +18,7 @@ public class LoginTest extends Base {
 	HomePage home;
 	ResetPage reset;
 
-	@Test(priority=1,enabled=true,description="verifyLoginUsingValidCredentials()",groups= {"Sanity"})
+	@Test(priority=1,enabled=true,description="tc_001_verifyLoginUsingValidCredentials()",groups= {"Sanity"})
 
 	public void tc_001_verifyLoginUsingValidCredentials() { //passed
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");

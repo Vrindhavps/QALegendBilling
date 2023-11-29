@@ -52,6 +52,15 @@ public class UserPage extends TestHelperUtility {
 	@FindBy(xpath = _HomeField)
 	private WebElement HomeField;
 	
+	private final String _showentries = "//select[@name='users_table_length']";
+	@FindBy(xpath=_showentries)
+	private WebElement showentries;
+	
+	private final String _showEntriesField="//select[@class='form-control input-sm']/option[@value='50']";
+	@FindBy(xpath=_showEntriesField)
+	private WebElement showEntriesField;
+	
+	
 	public void searchuser(String uName) {
 		wait.waitForElementToBeVisible(driver, usernameField);
 		page.enterText(usernameField, uName);
@@ -81,4 +90,16 @@ public class UserPage extends TestHelperUtility {
 	public void clickonokDeleteButton() {
 	   page.clickOnElement(okdeleteButton);
 	}
+	
+	public void clickshowentries()
+	{
+		page.clickOnElement(showentries);
+		
+	}
+	
+	public void selectEntries()
+	{
+		page.clickOnElement(showEntriesField);
+	}
+
 }
