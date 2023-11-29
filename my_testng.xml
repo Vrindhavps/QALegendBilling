@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="my_testng-suite">
+	<listeners>
+		<listener class-name="com.QALegendBilling.listeners.TestListener" />
+	</listeners>
+	<test thread-count="5" name="chromeTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.QALegendBilling.testscript.HomeTest">
+				<methods>
+					<include name="tc_004_verifyUserManagementtabs()" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite> 
+
