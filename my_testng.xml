@@ -10,6 +10,26 @@
 			<class name="com.QALegendBilling.testscript.HomeTest">
 				<methods>
 					<include name="tc_004_verifyUserManagementtabs()" />
+					<include name="tc_005_verifyUserSearchWithValidData()"/>
+				</methods>
+			</class>
+			<class name="com.QALegendBilling.testscript.LoginTest">
+				<methods>
+					<include name="tc_001_verifyLoginUsingValidCredentials()"/>
+					<include name="tc_003_verifyNavigationToLoginPageClickingSignOut()"/>
+				</methods>
+			</class>
+			<class name="com.QALegendBilling.testscript.ResetTest">
+				<methods>
+					<include name="tc_002_verifyResetPasswordField()"/>
+				</methods>
+			</class>
+			<class name="com.QALegendBilling.testscript.AddTest">
+				<methods>
+					<include name="tc_006_verifyErrorMessageDisplayedWithoutFillingMandatoryFieldinAddUser()"/>
+					<include name="tc_007_verifyUserLoginWithNewlyAddedUser()"/>
+					<include name="tc_008_verifyDeleteUser()"/>
+					<include name="tc_010_verifyShowEntries()"/>
 				</methods>
 			</class>
 		</classes>

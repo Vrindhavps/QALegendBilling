@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import com.QALegendBilling.constants.Constants;
 import com.QALegendBilling.utilities.TestHelperUtility;
@@ -40,21 +41,21 @@ public class Base extends TestHelperUtility{
 	}
 
 	
-	/*  @BeforeMethod(alwaysRun = true)
+	  @BeforeMethod(alwaysRun = true)
 	  @Parameters({"browser"})
 	  public void setUP(String browserName){ 
 	 String url= prop.getProperty("url");
 	 driver = DriverFactory.testInitialization(browserName);
 	 driver.get(url);
-	 }*/
+	 }
 	 
-	@BeforeMethod(alwaysRun = true)
-	public void setUP() {
-		String browser = prop.getProperty("browser");
-		String url = prop.getProperty("url");
-		driver = DriverFactory.testInitialization(browser);
-		driver.get(url);
-	}
+//	@BeforeMethod(alwaysRun = true)
+//	public void setUP() {
+//		String browser = prop.getProperty("browser");
+//		String url = prop.getProperty("url");
+//		driver = DriverFactory.testInitialization(browser);
+//		driver.get(url);
+//	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
