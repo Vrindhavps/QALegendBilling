@@ -9,27 +9,27 @@
 		<classes>
 			<class name="com.QALegendBilling.testscript.HomeTest">
 				<methods>
-					<exclude name="tc_004_verifyUserManagementtabs()" />
-					<exclude name="tc_005_verifyUserSearchWithValidData()"/>
+					<include name="tc_004_verifyUserManagementtabs()" />
+					<include name="tc_005_verifyUserSearchWithValidData()"/>
 				</methods>
 			</class>
 			<class name="com.QALegendBilling.testscript.LoginTest">
 				<methods>
-					<exclude name="tc_001_verifyLoginUsingValidCredentials()"/>
-					<exclude name="tc_003_verifyNavigationToLoginPageClickingSignOut()"/>
+					<include name="tc_001_verifyLoginUsingValidCredentials()"/>
+					<include name="tc_003_verifyNavigationToLoginPageClickingSignOut()"/>
 				</methods>
 			</class>
 			<class name="com.QALegendBilling.testscript.ResetTest">
 				<methods>
-					<exclude name="tc_002_verifyResetPasswordField()"/>
+					<include name="tc_002_verifyResetPasswordField()"/>
 				</methods>
 			</class>
 			<class name="com.QALegendBilling.testscript.AddTest">
 				<methods>
-					<exclude name="tc_006_verifyErrorMessageDisplayedWithoutFillingMandatoryFieldinAddUser()"/>
-					<exclude name="tc_007_verifyUserLoginWithNewlyAddedUser()"/>
+					<include name="tc_006_verifyErrorMessageDisplayedWithoutFillingMandatoryFieldinAddUser()"/>
+					<include name="tc_007_verifyUserLoginWithNewlyAddedUser()"/>
 					<include name="tc_008_verifyDeleteUser()"/>
-					<exclude name="tc_010_verifyShowEntries()"/>
+					<include name="tc_010_verifyShowEntries()"/>
 				</methods>
 			</class>
 		</classes>
